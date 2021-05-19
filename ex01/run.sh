@@ -1,0 +1,1 @@
+clang++ Fixed.cpp main.cpp -o ex01 && ./ex01
