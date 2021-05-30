@@ -6,9 +6,7 @@
 class Fixed {
 private:
     int _val;
-    static const int _frac = 8;
-    bool    _checkMaxMin(int nbr);
-    void    _throwErr();
+    static const int _frac;
 
 public:
     Fixed();
@@ -25,6 +23,6 @@ public:
     
 };
 
-std::ostream&	operator<<(const std::ostream& o, const Fixed& src);
+std::ostream&	operator<<(std::ostream& o, const Fixed& src);
 
 #endif

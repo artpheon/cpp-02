@@ -1,0 +1,1 @@
+clang++ -Wall -Wextra -Wno-unused -Werror *.cpp -o ex02 && ./ex02

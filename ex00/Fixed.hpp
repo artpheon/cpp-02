@@ -5,7 +5,7 @@
 class Fixed {
 private:
     int _val;
-    static const int _frac = 8;
+    static const int _frac;
 
 public:
     Fixed();
@@ -13,11 +13,10 @@ public:
     ~Fixed();
 
     Fixed& operator=(const Fixed& right);
-	int	getValue() const;
     int getRawBits() const;
 	void	setRawBits(const int raw);
 };
 
-std::ostream&	operator<<(const std::ostream& o, Fixed const& src);
+std::ostream&	operator<<(std::ostream& o, Fixed const& src);
 
 #endif

@@ -15,12 +15,8 @@ Fixed::~Fixed() {
 
 Fixed& Fixed::operator=(const Fixed& right) {
     std::cout << "Assigning a fixed to another fixed." << std::endl;
-    this->_val = right.getValue();
+    this->_val = right.getRawBits();
     return *this;
-}
-
-int	Fixed::getValue() const {
-    return this->_val;
 }
 
 int Fixed::getRawBits() const {
@@ -31,8 +27,9 @@ void	Fixed::setRawBits(const int raw) {
     this->_val = raw;
 }
 
-
-std::ostream&	operator<<(std::ostream& o, Fixed const& src) {
-    o << src.getValue();
+std::ostream&	operator<<(std::ostream& o, const Fixed& src) {
+    o << src.getRawBits();
     return (o);
 }
+
+const int Fixed::_frac = 8;

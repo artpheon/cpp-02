@@ -45,14 +45,10 @@ int Fixed::toInt() const {
     return (int)(this->getRawBits() / (1 << this->_frac));
 }
 
-bool    Fixed::_checkMaxMin(int nbr) {
-    if (nbr > 838860)
-        return true;
-    if (nbr < -838860)
-        return true;
-    return (false);
+std::ostream& operator<<(std::ostream & o, Fixed const & rhs)
+{
+	o << rhs.toFloat();
+	return o;
 }
 
-void Fixed::_throwErr() {
-    std::cout << "The value is either too big or too small" << std::endl;
-}
+const int Fixed::_frac = 8;

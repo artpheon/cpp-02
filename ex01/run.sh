@@ -1,1 +1,1 @@
-clang++ Fixed.cpp main.cpp -o ex01 && ./ex01
+clang++ -Wall -Wextra -Wno-unused -Werror Fixed.cpp main.cpp -o ex01 && ./ex01
